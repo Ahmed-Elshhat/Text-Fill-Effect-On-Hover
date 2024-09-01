@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.fill {
+  position: relative;
+  width: fit-content;
+  margin: 20px auto;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke: 1px #333;
+  cursor: pointer;
+}
+
+.fill::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  -webkit-text-fill-color: #ff5722;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.fill:hover:before {
+  width: 100%;
+}
